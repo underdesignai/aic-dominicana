@@ -805,6 +805,7 @@
         </span>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f69f00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <span class="text-xs font-bold tracking-wide">Asistente AIC</span>
+        <span id="aic-chat-unread-badge" class="hidden -top-1.5 -right-1.5 h-5 w-5 rounded-full bg-amber-500 text-forest-950 text-[11px] font-extrabold items-center justify-center shadow-md">1</span>
       </button>
     `;
 
@@ -815,16 +816,34 @@
     const panel = document.getElementById('aic-chat-panel');
     const minimizeBtn = document.getElementById('aic-chat-minimize');
     const toggleBtn = document.getElementById('aic-chat-toggle-btn');
+    const unreadBadge = document.getElementById('aic-chat-unread-badge');
     const chatForm = document.getElementById('aic-chat-form');
     const chatInput = document.getElementById('aic-chat-input');
 
-    // Auto-open every time the page loads!
-    panel.style.display = 'flex';
+    // Auto-open ONLY on desktop computers (never auto-open on mobile/tablets)
+    const isMobileDevice =
+      window.innerWidth < 1024 ||
+      window.matchMedia('(max-width: 1023px)').matches ||
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobileDevice) {
+      panel.style.display = 'none';
+      if (unreadBadge) {
+        unreadBadge.classList.remove('hidden');
+        unreadBadge.classList.add('absolute', 'flex');
+      }
+    } else {
+      panel.style.display = 'flex';
+    }
 
     const toggleChat = () => {
       if (panel.style.display === 'none') {
         panel.style.display = 'flex';
-        chatInput.focus();
+        if (unreadBadge) {
+          unreadBadge.classList.add('hidden');
+          unreadBadge.classList.remove('flex');
+        }
+        if (!isMobileDevice) chatInput.focus();
       } else {
         panel.style.display = 'none';
       }

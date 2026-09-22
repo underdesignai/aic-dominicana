@@ -82,18 +82,18 @@ allHtmlFiles.forEach(rel => {
   if (depth === 1) prefix = '../';
   if (depth === 2) prefix = '../../';
 
-  // 3. Bump cache-busters to v=3.5
-  content = content.replace(/animations\.css(\?v=[0-9.]+)?/g, 'animations.css?v=3.5');
-  content = content.replace(/app\.js(\?v=[0-9.]+)?/g, 'app.js?v=3.5');
+  // 3. Bump cache-busters to v=3.6
+  content = content.replace(/animations\.css(\?v=[0-9.]+)?/g, 'animations.css?v=3.6');
+  content = content.replace(/app\.js(\?v=[0-9.]+)?/g, 'app.js?v=3.6');
 
   // 4. Inject i18n-bot.js right after app.js if not already present
   if (!content.includes('i18n-bot.js')) {
     content = content.replace(
-      /(<script src="[^"]*app\.js\?v=3\.5"><\/script>)/,
-      `$1\n  <script src="${prefix}js/i18n-bot.js?v=3.5"></script>`
+      /(<script src="[^"]*app\.js\?v=3\.6"><\/script>)/,
+      `$1\n  <script src="${prefix}js/i18n-bot.js?v=3.6"></script>`
     );
   } else {
-    content = content.replace(/i18n-bot\.js(\?v=[0-9.]+)?/g, 'i18n-bot.js?v=3.5');
+    content = content.replace(/i18n-bot\.js(\?v=[0-9.]+)?/g, 'i18n-bot.js?v=3.6');
   }
 
   fs.writeFileSync(filePath, content, 'utf8');
