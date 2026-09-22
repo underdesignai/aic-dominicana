@@ -177,10 +177,10 @@ allHtmlFiles.forEach(rel => {
   if (depth === 1) prefix = '../';
   if (depth === 2) prefix = '../../';
 
-  // 6. Bump cache-busters to v=3.7
-  content = content.replace(/animations\.css(\?v=[0-9.]+)?/g, 'animations.css?v=3.7');
-  content = content.replace(/app\.js(\?v=[0-9.]+)?/g, 'app.js?v=3.7');
-  content = content.replace(/i18n-bot\.js(\?v=[0-9.]+)?/g, 'i18n-bot.js?v=3.7');
+  // 6. Bump cache-busters to v=3.8
+  content = content.replace(/animations\.css(\?v=[0-9.]+)?/g, 'animations.css?v=3.8');
+  content = content.replace(/app\.js(\?v=[0-9.]+)?/g, 'app.js?v=3.8');
+  content = content.replace(/i18n-bot\.js(\?v=[0-9.]+)?/g, 'i18n-bot.js?v=3.8');
 
   fs.writeFileSync(filePath, content, 'utf8');
   console.log('Updated mobile-first header, left drawer & zoom lock on:', rel);

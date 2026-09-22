@@ -46,24 +46,9 @@ function initIcons() {
  * Mobile Navigation Menu Handler (Slides from the Left) & Mobile Zoom Lock
  */
 function setupMobileMenu() {
-  // Block pinch-to-zoom and double-tap zoom on mobile so it feels like a native app
-  document.addEventListener('gesturestart', (e) => e.preventDefault(), { passive: false });
-  document.addEventListener('gesturechange', (e) => e.preventDefault(), { passive: false });
-  document.addEventListener('gestureend', (e) => e.preventDefault(), { passive: false });
-  document.addEventListener('touchmove', (e) => {
-    if (e.touches && e.touches.length > 1) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  let lastTouchEnd = 0;
-  document.addEventListener('touchend', (e) => {
-    const now = Date.now();
-    if (now - lastTouchEnd <= 300) {
-      e.preventDefault();
-    }
-    lastTouchEnd = now;
-  }, { passive: false });
+  // Block ONLY pinch-to-zoom gestures (never interfere with 1-finger vertical scrolling)
+  document.addEventListener('gesturestart', (e) => e.preventDefault());
+  document.addEventListener('gesturechange', (e) => e.preventDefault());
 
   const menuBtn = document.getElementById('mobile-menu-btn');
   const closeBtn = document.getElementById('mobile-menu-close');
