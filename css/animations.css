@@ -1,0 +1,279 @@
+/**
+ * AIC Dominicana - Professional Luxury Animation & Scrollytelling Engine
+ * Powered by GSAP 3, ScrollTrigger, Vanilla-Tilt 3D, and 60fps Canvas Particles.
+ */
+
+:root {
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 1. Top Continuous Scroll Progress Bar */
+#aic-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(90deg, #2d6a4f 0%, #52b788 50%, #f69f00 100%);
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+  box-shadow: 0 0 12px rgba(246, 159, 0, 0.65);
+  pointer-events: none;
+}
+
+/* 2. Ensure Particle Canvas is Disabled */
+#aic-particles-canvas {
+  display: none !important;
+}
+
+/* 3. Continuous Scroll-Linked Ambient Orbs */
+.aic-ambient-orb {
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.14;
+  will-change: transform;
+}
+
+#aic-orb-emerald {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #52b788 0%, rgba(11, 31, 23, 0) 70%);
+  top: 15%;
+  left: -120px;
+}
+
+#aic-orb-amber {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #f69f00 0%, rgba(246, 159, 0, 0) 70%);
+  bottom: 10%;
+  right: -100px;
+}
+
+/* 4. Interactive Scroll Progress Ring (Bottom Left - avoids Chatbot on Bottom Right) */
+#aic-scroll-ring-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: rgba(11, 31, 23, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 48;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.35s var(--ease-luxury), transform 0.35s var(--ease-luxury), visibility 0.35s, background-color 0.25s;
+}
+
+#aic-scroll-ring-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+#aic-scroll-ring-btn:hover {
+  background: rgba(27, 67, 50, 0.98);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 14px 30px -5px rgba(246, 159, 0, 0.3);
+}
+
+#aic-scroll-ring-btn svg.progress-ring {
+  position: absolute;
+  inset: -1px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+#aic-scroll-ring-btn svg.progress-ring circle {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* 5. Custom Luxury Cursor Follower (Desktop Only) */
+#aic-cursor-dot,
+#aic-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@media (pointer: fine) and (min-width: 1024px) {
+  #aic-cursor-dot {
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: #f69f00;
+    box-shadow: 0 0 10px rgba(246, 159, 0, 0.8);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+  }
+
+  #aic-cursor-ring {
+    display: block;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(82, 183, 136, 0.55);
+    background-color: rgba(82, 183, 136, 0.04);
+    transition: width 0.3s var(--ease-luxury), height 0.3s var(--ease-luxury), border-color 0.3s, background-color 0.3s;
+  }
+
+  #aic-cursor-ring.cursor-hover {
+    width: 54px;
+    height: 54px;
+    border-color: rgba(246, 159, 0, 0.85);
+    background-color: rgba(246, 159, 0, 0.08);
+  }
+}
+
+/* 6. Vanilla-Tilt Glare Refinement */
+.js-tilt-glare {
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* 7. Nav Links Hover Underline Indicator */
+header nav ul.lg\:flex li a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+header nav ul.lg\:flex li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #52b788, #f69f00);
+  border-radius: 9999px;
+  transition: width 0.3s var(--ease-luxury), left 0.3s var(--ease-luxury);
+}
+
+header nav ul.lg\:flex li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* 8. Card Elevations & Image Zooms */
+article, .property-card, .service-card, .bento-card {
+  transition: box-shadow 0.4s var(--ease-luxury), border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+article:hover, .property-card:hover, .service-card:hover {
+  box-shadow: 0 22px 38px -12px rgba(11, 31, 23, 0.16), 0 10px 15px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+article img, .property-card img, .group img {
+  transition: transform 0.75s var(--ease-luxury), filter 0.4s ease !important;
+}
+
+article:hover img, .property-card:hover img, .group:hover img {
+  transform: scale(1.05);
+}
+
+/* 9. Shimmer Sheen on Primary Buttons */
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-luxury::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+.btn-luxury:hover::after {
+  transform: translateX(380%) rotate(25deg);
+}
+
+/* 10. Sticky Navbar Dynamic Scrolled State */
+header.nav-scrolled {
+  box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.65);
+  background-color: rgba(11, 31, 23, 0.98);
+  border-bottom-color: rgba(64, 145, 108, 0.4);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* 11. Slow Floating Elements */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* 12. Mobile Drawer Anti-FOUC & Desktop Guard */
+#mobile-drawer:not(.drawer-open),
+#mobile-backdrop:not(.backdrop-open) {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  #mobile-drawer,
+  #mobile-backdrop,
+  aside[aria-label="Acciones rápidas de contacto"] {
+    display: none !important;
+  }
+}
+
+/* 13. Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 14. Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  #aic-particles-canvas,
+  #aic-cursor-dot,
+  #aic-cursor-ring {
+    display: none !important;
+  }
+}

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>AIC Dominicana — Inmobiliaria en Las Terrenas, Samaná | Ventas & Alquileres Vacacionales</title>
+  <meta name="description" content="Alquileres vacacionales y propiedades en venta en Las Terrenas, Samaná. Villas de lujo, apartamentos y terrenos gestionados por AIC Dominicana. Llámanos +1)809-240-6588."/>
+  <meta name="keywords" content="inmobiliaria Las Terrenas, villas en alquiler Las Terrenas, comprar villa Samana, AIC Dominicana, bienes raices Republica Dominicana"/>
+  <meta property="og:title" content="AIC Dominicana — Inmobiliaria en Las Terrenas, Samaná"/>
+  <meta property="og:description" content="Especialistas locales en alquileres vacacionales, ventas y administración de villas en Las Terrenas desde 2002."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://www.aic-dominicana-inmobiliaria.com/src/playa-punta-bonita-las-terrenas.jpg"/>
+
+  <!-- Tailwind CSS CDN with forms and container queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            forest: {
+              950: '#0b1f17',
+              900: '#122c22',
+              850: '#153529',
+              800: '#1b4332',
+              700: '#2d6a4f',
+              600: '#40916c',
+              500: '#52b788',
+              400: '#74c69d',
+              100: '#d8f3dc',
+              50: '#edf9f0'
+            },
+            amber: {
+              500: '#f69f00',
+              600: '#d98200'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero-mask {
+      background: linear-gradient(180deg, rgba(8, 22, 17, 0.50) 0%, rgba(8, 22, 17, 0.25) 50%, rgba(8, 22, 17, 0.60) 100%);
+    }
+    .hero-title-shadow {
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .glass-nav {
+      background: rgba(11, 31, 23, 0.75);
+      backdrop-filter: blur(16px);
+    }
+  
+    /* Prevent Mobile Drawer FOUC / Flashing on desktop & initial load */
+    #mobile-drawer:not(.drawer-open),
+    #mobile-backdrop:not(.backdrop-open) {
+      display: none !important;
+    }
+    @media (min-width: 1024px) {
+      #mobile-drawer,
+      #mobile-backdrop,
+      aside[aria-label="Acciones rápidas de contacto"] {
+        display: none !important;
+      }
+    }
+
+  </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "AIC Dominicana",
+    "image": "https://www.aic-dominicana-inmobiliaria.com/src/playa-punta-bonita-las-terrenas.jpg",
+    "description": "Inmobiliaria líder en Las Terrenas, Samaná. Ventas de villas, apartamentos, terrenos y gestión integral de alquileres vacacionales.",
+    "telephone": "+18092406588",
+    "email": "info@aic-dominicana.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza El Paseo de la Costanera, Av. Juan Pablo Duarte",
+      "addressLocality": "Las Terrenas",
+      "addressRegion": "Samaná",
+      "addressCountry": "DO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "19.3216",
+      "longitude": "-69.5408"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/animations.css?v=3.5"/>
+</head>
+<body class="bg-[#fcfdfc] text-neutral-800 antialiased selection:bg-forest-600 selection:text-white pb-16 md:pb-0">
+
+  
+  <!-- BEGIN: Global Sticky Navigation Bar (Identical across all pages) -->
+  <!-- BEGIN: Global Sticky Navigation Bar (100% Identical Across All Pages) -->
+    <header class="bg-forest-950 text-white border-b border-forest-900/80 sticky top-0 z-50 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-10">
+      <!-- Brand Logo & Subtitle matching user specification -->
+      <a class="flex items-center gap-3 group" href="/index.html">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white shadow-inner transition-transform group-hover:scale-105 border border-white/10">
+          <i class="h-5 w-5 text-amber-500" data-lucide="palmtree"></i>
+        </div>
+        <div class="leading-tight">
+          <span class="block text-lg font-bold tracking-tight text-white">AIC Dominicana</span>
+          <span class="block text-[10px] font-semibold tracking-wider uppercase text-emerald-400">OFICINA LAS TERRENAS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links - Exact 5 identical links -->
+      <ul class="hidden lg:flex items-center gap-6 text-sm font-medium text-white/90">
+        <li><a class="transition-colors hover:text-emerald-300 py-1" href="/index.html">Inicio</a></li>
+        <li><a class="transition-colors hover:text-emerald-300 py-1" href="/alquileres/vacaciones.html">Alquileres Vacacionales</a></li>
+        <li><a class="transition-colors hover:text-emerald-300 py-1" href="/ventas/villa.html">Ventas</a></li>
+        <li><a class="transition-colors hover:text-emerald-300 py-1" href="/construccion.html">Construcción & Conserjería</a></li>
+        <li><a class="transition-colors hover:text-emerald-300 py-1" href="/las-terrenas-y-ustedes/contacto.html">Contacto</a></li>
+      </ul>
+
+      <!-- Right Action Contacts: Language Selector (between Contacto & Phone) + Phone Number -->
+      <div class="flex items-center gap-3">
+        <!-- Language Selector (ES | FR | EN) -->
+        <div id="aic-lang-switcher" class="flex items-center gap-0.5 bg-white/10 border border-white/15 rounded-full p-1 text-xs font-bold shadow-sm backdrop-blur-sm" aria-label="Selector de idioma">
+          <button type="button" data-lang-switch="es" class="lang-btn px-2.5 py-1 rounded-full transition-all bg-emerald-600 text-white shadow-sm" title="Español">ES</button>
+          <button type="button" data-lang-switch="fr" class="lang-btn px-2.5 py-1 rounded-full transition-all text-white/75 hover:text-white" title="Français">FR</button>
+          <button type="button" data-lang-switch="en" class="lang-btn px-2.5 py-1 rounded-full transition-all text-white/75 hover:text-white" title="English">EN</button>
+        </div>
+
+        <a class="flex items-center gap-2 text-sm font-semibold text-white/95 hover:text-white transition-colors bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full border border-white/15 shadow-sm" href="tel:+18092406588">
+          <i class="h-4 w-4 text-emerald-400" data-lucide="phone-call"></i>
+          <span>+1)809-240-6588</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" aria-label="Abrir menú" class="lg:hidden flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white border border-white/10">
+          <i class="h-6 w-6" data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <!-- END: Global Sticky Navigation Bar -->
+
+  <!-- BEGIN: HeroSection -->
+  <section class="relative min-h-[740px] lg:min-h-[820px] w-full overflow-hidden text-white">
+    <!-- Hero Ambient Video Background (homevideo.mp4) -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      poster="src/playa-punta-bonita-las-terrenas.jpg"
+      class="absolute inset-0 h-full w-full object-cover object-center pointer-events-none z-0"
+    >
+      <source src="homevideo.mp4" type="video/mp4"/>
+      <!-- Fallback image if video cannot play -->
+      <img 
+        alt="Playa Bonita Las Terrenas Samaná - AIC Dominicana" 
+        class="absolute inset-0 h-full w-full object-cover object-center" 
+        src="src/playa-punta-bonita-las-terrenas.jpg"
+      />
+    </video>
+    <div class="hero-mask absolute inset-0 z-10"></div>
+    <!-- BEGIN: HeroContent -->
+    <div class="relative z-20 mx-auto max-w-7xl px-6 pt-10 pb-28 lg:px-10 lg:pt-16">
+      <div class="max-w-2xl">
+        <!-- Tagline Pill / Subheading -->
+        <div class="inline-flex items-center gap-2 rounded-full bg-forest-800/80 border border-emerald-400/30 px-3.5 py-1.5 text-xs font-bold tracking-widest uppercase text-emerald-300 mb-4 backdrop-blur-sm">
+          <i class="h-3.5 w-3.5 text-amber-500" data-lucide="award"></i>
+          <span>ESPECIALISTAS EN LAS TERRENAS DESDE 2002</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-title-shadow text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.14] tracking-tight text-white mb-6">
+          AIC Dominicana — <span class="text-amber-500">Inmobiliaria</span> en Las Terrenas, Samaná
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-title-shadow text-base sm:text-lg text-neutral-100 font-medium leading-relaxed mb-8 max-w-xl">
+          Especialistas locales en alquileres vacacionales y ventas inmobiliarias. Catálogo verificado de villas exclusivas, apartamentos y terrenos, con servicios complementarios de construcción y conserjería personalizada.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="inline-flex items-center gap-2 rounded-full bg-amber-500 hover:bg-amber-600 text-neutral-950 px-7 py-3.5 text-sm font-bold transition-all shadow-lg hover:gap-3" href="alquileres/vacaciones.html">
+            <span>Ver Alquileres Vacacionales</span>
+            <i class="h-4 w-4" data-lucide="arrow-right"></i>
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-full bg-forest-800 hover:bg-forest-700 text-white px-7 py-3.5 text-sm font-semibold border border-emerald-500/30 backdrop-blur-sm transition-all shadow" href="ventas/villa.html">
+            <span>Ver Propiedades en Venta</span>
+            <i class="h-4 w-4" data-lucide="home"></i>
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/25 px-6 py-3.5 text-sm font-semibold backdrop-blur-sm transition-colors" href="tel:+18092406588">
+            <i class="h-4 w-4 text-emerald-400" data-lucide="phone"></i>
+            <span>Llámanos: +1)809-240-6588</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END: HeroContent -->
+
+    <!-- BEGIN: FloatingStatsCard -->
+    <div class="relative z-20 mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="lg:absolute lg:right-10 lg:bottom-12 w-full lg:max-w-xl pb-10 lg:pb-0">
+        <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-2xl text-neutral-900 border border-white/90" data-purpose="key-metrics-card">
+          <h2 class="text-base sm:text-lg font-bold text-neutral-900 mb-5 flex items-center justify-between">
+            <span>¿Por qué elegir AIC Dominicana?</span>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-forest-100 text-forest-800">Samaná, RD</span>
+          </h2>
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 divide-x divide-neutral-200/80">
+            <!-- Stat 1 -->
+            <div class="text-left">
+              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-forest-50 text-forest-700 mb-2">
+                <i class="h-5 w-5" data-lucide="calendar-check"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-extrabold text-neutral-900">98%</div>
+              <div class="text-xs font-medium text-neutral-500 leading-tight">Ocupación Vacacional</div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="pl-3 sm:pl-6 text-left">
+              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-forest-50 text-forest-700 mb-2">
+                <i class="h-5 w-5" data-lucide="shield-check"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-extrabold text-neutral-900">24/7</div>
+              <div class="text-xs font-medium text-neutral-500 leading-tight">Soporte & Conserjería</div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="pl-3 sm:pl-6 text-left">
+              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-forest-50 text-forest-700 mb-2">
+                <i class="h-5 w-5" data-lucide="users"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-extrabold text-neutral-900">20+</div>
+              <div class="text-xs font-medium text-neutral-500 leading-tight">Años de Trayectoria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: FloatingStatsCard -->
+  
+  </section>
+  <!-- END: HeroSection -->
+
+  <!-- BEGIN: ThreeServicesSection -->
+  <section class="py-16 bg-neutral-50 border-b border-neutral-200/60" id="servicios">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-forest-700">SOLUCIONES INTEGRALES</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 mt-2">Nuestros Tres Pilares en Las Terrenas</h2>
+        <p class="text-neutral-600 text-sm mt-2">Cubrimos cada faceta de tu proyecto en República Dominicana con atención experta y transparente.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pillar 1: Alquileres -->
+        <div class="group relative rounded-2xl bg-white p-7 shadow-sm hover:shadow-xl border border-neutral-200/80 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i class="h-6 w-6" data-lucide="calendar"></i>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Alquileres Vacacionales</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Selección verificada de villas y apartamentos frente a las mejores playas. Fotos reales, descripciones prácticas y soporte en el destino.
+          </p>
+          <a class="inline-flex items-center gap-1.5 text-sm font-bold text-forest-700 hover:text-forest-900 group-hover:gap-2.5 transition-all" href="alquileres/vacaciones.html">
+            <span>Ver alquileres</span>
+            <i class="h-4 w-4" data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Pillar 2: Ventas -->
+        <div class="group relative rounded-2xl bg-white p-7 shadow-sm hover:shadow-xl border border-neutral-200/80 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i class="h-6 w-6" data-lucide="home"></i>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Ventas & Asesoría Legal</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Villas de lujo, apartamentos con piscina, parcelas con vista al mar y traspasos de negocios con título deslindado y máxima seguridad jurídica.
+          </p>
+          <a class="inline-flex items-center gap-1.5 text-sm font-bold text-forest-700 hover:text-forest-900 group-hover:gap-2.5 transition-all" href="ventas/villa.html">
+            <span>Explorar ventas</span>
+            <i class="h-4 w-4" data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Pillar 3: Construcción & Conserje -->
+        <div class="group relative rounded-2xl bg-white p-7 shadow-sm hover:shadow-xl border border-neutral-200/80 transition-all">
+          <div class="h-12 w-12 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <i class="h-6 w-6" data-lucide="hard-hat"></i>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Construcción & Conserje</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Diseño y construcción a medida de tu villa caribeña. Servicio integral de conserje VIP: traslados, chef, alquiler de quads y gestión de llaves.
+          </p>
+          <a class="inline-flex items-center gap-1.5 text-sm font-bold text-forest-700 hover:text-forest-900 group-hover:gap-2.5 transition-all" href="las-terrenas-y-ustedes/contacto.html">
+            <span>Solicitar información</span>
+            <i class="h-4 w-4" data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ThreeServicesSection -->
+
+  <!-- BEGIN: QualityHomesSection (Bento Grid) -->
+  <section class="py-20 lg:py-24 bg-white" data-purpose="our-properties-showcase" id="propiedades">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <!-- Left Column: Copy & Checklist -->
+        <div class="lg:col-span-5 pt-2">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-bold tracking-widest uppercase text-forest-700">NUESTRAS PROPIEDADES EN SAMANÁ</span>
+            <div class="h-px w-8 bg-forest-700/50"></div>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 mb-4 leading-tight">
+            Hogares de Calidad, Vida Excepcional en el Caribe
+          </h2>
+          
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed mb-6">
+            Desde modernos apartamentos frente a la playa hasta exclusivas villas familiares en las colinas verdes de Las Terrenas. Propiedades rigurosamente verificadas en los sectores más privilegiados: Playa Bonita, Las Ballenas, Cosón y Portillo.
+          </p>
+
+          <!-- Checkpoints List -->
+          <ul class="space-y-3.5 mb-8">
+            <li class="flex items-center gap-3 text-sm font-semibold text-neutral-700">
+              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-forest-600 text-white flex-shrink-0">
+                <i class="h-3 w-3 stroke-[3]" data-lucide="check"></i>
+              </div>
+              <span>Propiedades meticulosamente mantenidas y con títulos en regla</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-neutral-700">
+              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-forest-600 text-white flex-shrink-0">
+                <i class="h-3 w-3 stroke-[3]" data-lucide="check"></i>
+              </div>
+              <span>Ubicaciones turísticas y residenciales de alta plusvalía y retorno</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-neutral-700">
+              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-forest-600 text-white flex-shrink-0">
+                <i class="h-3 w-3 stroke-[3]" data-lucide="check"></i>
+              </div>
+              <span>Comunidades privadas con seguridad 24h y acceso directo a la playa</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-neutral-700">
+              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-forest-600 text-white flex-shrink-0">
+                <i class="h-3 w-3 stroke-[3]" data-lucide="check"></i>
+              </div>
+              <span>Equipo local bilingüe de asistencia inmobiliaria y conserjería</span>
+            </li>
+          </ul>
+
+          <div class="flex items-center gap-4">
+            <a class="inline-flex items-center gap-2 rounded-full bg-forest-800 hover:bg-forest-900 px-7 py-3.5 text-sm font-semibold text-white transition-all shadow hover:gap-3" href="ventas/villa.html">
+              <span>Ver Catálogo de Ventas</span>
+              <i class="h-4 w-4" data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Asymmetric Bento Grid matching image composition -->
+        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Big Highlight Card (Bonita Village) -->
+          <div class="group relative overflow-hidden rounded-2xl bg-neutral-900 shadow-lg h-[390px] md:h-[430px]">
+            <img 
+              alt="Bonita Village - Las Terrenas" 
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" 
+              src="https://www.aic-dominicana-inmobiliaria.com/src/bonita-village-las-terrenas.jpg"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAmQ1Z3jmwFXbxV_WrS3ZRVHKNrAO7AoWcSVNxEfd_kXN8hUVTFpXxQGdneQ8W2rR2WFj6Eggo_WUSs98wXCLxbJUK_SPmxEbz8BilAm56LCn8gIb8jfkM5gh04xwtymS4TDaoHRReWND-zcmearWnBak8JAc3P5GRvMImvJaUDnzvX112gg_RSev7wwCwvrOMaXyyzyWL0JEuaMUEgr07z8BodOpbcoFrEOwLYrsJhu5if-OVLUfPhFg';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+              <div class="flex items-end justify-between">
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-amber-500 text-neutral-950 text-[10px] font-bold uppercase tracking-wider mb-2">Proyecto Exclusivo</span>
+                  <h3 class="text-lg font-bold">Bonita Village Resort</h3>
+                  <p class="text-xs text-neutral-300">Playa Bonita, Las Terrenas</p>
+                  <div class="mt-3 flex items-center gap-3 text-xs text-neutral-200">
+                    <span class="flex items-center gap-1.5"><i class="h-3.5 w-3.5" data-lucide="bed"></i> 3 Hab</span>
+                    <span class="flex items-center gap-1.5"><i class="h-3.5 w-3.5" data-lucide="bath"></i> 3 Baños</span>
+                    <span class="flex items-center gap-1.5"><i class="h-3.5 w-3.5" data-lucide="square"></i> 220 m²</span>
+                  </div>
+                </div>
+                <a href="ventas/villa.html" aria-label="Ver detalles" class="h-9 w-9 rounded-full bg-forest-700/90 hover:bg-forest-600 text-white flex items-center justify-center transition-transform group-hover:translate-x-1">
+                  <i class="h-4 w-4" data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stacked Two Cards on Right -->
+          <div class="flex flex-col gap-5">
+            <!-- Small Card 1: Casa Mango -->
+            <div class="group relative overflow-hidden rounded-2xl bg-neutral-900 shadow h-[190px] md:h-[202px]">
+              <img 
+                alt="Casa Mango Las Terrenas" 
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" 
+                src="https://www.aic-dominicana-inmobiliaria.com/src/casa-mango-las-terrenas.jpg"
+                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDdl1HoT8whwJQVew9RDGTo1HGdf-X5ep8qrRFUGA4Wj3VE77lGNe2iLFqI3UmV6F86wFGC1CuZoXLcUw6KJkwNfupJVUjbyQEPuDeKfA1LWxEkXDpXSx4NHkOi8pTdpMpnT3cb5zRrbJUCAOPZy2OUpcfAqx9XgAgCAc6ux1q_DsxqJhTLli8pFMryMwad7XIzI3WmmKxQwW8PJg_VvUmPWDiDfz6j5v4cptnnBf1MI6RmAvVS3fQBRA';"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 inset-x-0 p-4 text-white flex items-end justify-between">
+                <div>
+                  <h3 class="text-base font-bold">Casa Mango Tropical</h3>
+                  <p class="text-xs text-neutral-300">Las Terrenas, Samaná</p>
+                </div>
+                <a href="alquileres/vacaciones.html" aria-label="Ver casa mango" class="h-8 w-8 rounded-full bg-forest-700/80 hover:bg-forest-600 text-white flex items-center justify-center transition-transform group-hover:translate-x-1">
+                  <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Small Card 2: Villa Caracola -->
+            <div class="group relative overflow-hidden rounded-2xl bg-neutral-900 shadow h-[190px] md:h-[202px]">
+              <img 
+                alt="Piscina Villa Caracola" 
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" 
+                src="https://www.aic-dominicana-inmobiliaria.com/src/piscine-villa-caracola-las-terrenas.jpg"
+                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuApsYDcvw_B5gt0ccomFnUJutZpUtGkvEsR40hMHNzmM7DGuC307mKmUt6Vu2C3H6WS8aNubuwl_Z4VittcQs11Z7Inb7RfQkDQFYTDucsbBzx6jX-hwO5G6TJgdl_z7BqjSPZe47TPMiDdcklTY55Yg9elDdsZFtTlDwiCin8rcbG1M6krqMMzlqVQT1Hqln73q4jxVf4n4OxGhy6-r7_ldLR1pHlPNQ2HFfZCgfUwO655Ltnrqx0wEg';"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 inset-x-0 p-4 text-white flex items-end justify-between">
+                <div>
+                  <h3 class="text-base font-bold">Villa Caracola & Piscina Infinity</h3>
+                  <p class="text-xs text-neutral-300">Playa Las Ballenas</p>
+                </div>
+                <a href="ventas/villa.html" aria-label="Ver villa caracola" class="h-8 w-8 rounded-full bg-forest-700/80 hover:bg-forest-600 text-white flex items-center justify-center transition-transform group-hover:translate-x-1">
+                  <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END: QualityHomesSection -->
+
+  <!-- BEGIN: AboutUsBannerSection -->
+  <section class="py-6 px-4 sm:px-6 lg:px-10" data-purpose="about-us-container" id="nosotros">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative overflow-hidden rounded-[2rem] bg-forest-900 text-white p-8 sm:p-12 lg:p-14 shadow-xl">
+        <!-- Subtle botanical decorative background accent -->
+        <div class="absolute -bottom-8 -left-8 text-forest-800/40 pointer-events-none select-none">
+          <i class="h-64 w-64" data-lucide="sprout"></i>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Text Content -->
+          <div class="lg:col-span-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold tracking-widest uppercase text-emerald-300">SOBRE AIC DOMINICANA</span>
+              <div class="h-px w-8 bg-emerald-400/60"></div>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+              Tu Socio Confiable en <br class="hidden sm:block"/>
+              <span class="text-emerald-400">Las Terrenas & Samaná</span>
+            </h2>
+
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed mb-6 max-w-lg">
+              Fundada en junio de 2002, AIC Dominicana se ha consolidado como la agencia de referencia en el mercado inmobiliario de la Península de Samaná. Acompañamos a compradores, inquilinos y propietarios con honestidad, conocimiento técnico de la zona y un servicio de conserjería integral.
+            </p>
+
+            <div class="p-4 rounded-xl bg-forest-800/70 border border-emerald-500/20 mb-8 max-w-lg">
+              <p class="text-xs text-emerald-200 font-semibold mb-1 uppercase tracking-wide">¿Eres propietario?</p>
+              <p class="text-xs text-neutral-300">Gestionamos tu inmueble con máxima rentabilidad vacacional, cuidado integral de mantenimiento y rendición mensual de cuentas.</p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <button data-modal-target="owner-modal" class="inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold px-6 py-3 text-sm transition-all shadow-md">
+                <span>Gestionamos tu Inmueble</span>
+                <i class="h-4 w-4" data-lucide="arrow-right"></i>
+              </button>
+              <a class="inline-flex items-center gap-2 text-sm font-semibold text-white/90 hover:text-emerald-300 transition-colors" href="las-terrenas-y-ustedes/contacto.html">
+                <span>Conoce a nuestro equipo</span>
+                <i class="h-4 w-4" data-lucide="chevron-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Villa Havana / Team Photography in Rounded Frame -->
+          <div class="lg:col-span-6">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl bg-neutral-800 border-2 border-white/10 aspect-[16/10]">
+              <img 
+                alt="Villa Havana Las Terrenas - AIC Dominicana" 
+                class="h-full w-full object-cover object-center" 
+                src="https://www.aic-dominicana-inmobiliaria.com/src/villa-havana-las-terrenas.jpg"
+                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuD_yqrGUlZOb1gex7Gs_oMT6GNfzMF2eaa-buIR4oGHKwSqgKr4DEq0Q_E1WuIeKKGRg3dqh0v4aE_ShEjl-Oq53FQlVzQQV_wY4cWGj7j9Ub1LIFAClfAFqn3Baz4ZSB2cuDoaMV1aKVPhmZCt3apGLQAfdgW1ukhicR2v8ueLQOiqW1mqSOWSh3irwZUKo1fbGnsMeMBzHQF9gv5uuwTHc2GrkqMdhvf1DymEOBAoHZYkWbDNAVMbcA';"
+              />
+              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-[11px] text-white/90 font-medium">
+                Villa Havana — Las Terrenas
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: AboutUsBannerSection -->
+
+  <!-- BEGIN: FeaturedPropertiesSection -->
+  <section class="py-20 lg:py-24" data-purpose="featured-listings" id="catalogo">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      
+      <!-- Section Header with Search Bar -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-bold tracking-widest uppercase text-forest-700">CATÁLOGO DESTACADO</span>
+            <div class="h-px w-8 bg-forest-700/50"></div>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900">
+            Propiedades Seleccionadas en <span class="text-forest-600">Las Terrenas</span>
+          </h2>
+        </div>
+
+        <!-- Integrated Search Bar -->
+        <div class="w-full lg:max-w-md">
+          <form class="relative flex items-center" onsubmit="event.preventDefault();">
+            <input 
+              class="w-full rounded-full border border-neutral-300/80 bg-white py-3 pl-5 pr-14 text-xs sm:text-sm text-neutral-800 placeholder-neutral-400 focus:border-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-600/20 shadow-sm" 
+              placeholder="Buscar por zona, playa o referencia..." 
+              type="text"
+            />
+            <button aria-label="Buscar" class="absolute right-1.5 flex h-9 w-9 items-center justify-center rounded-full bg-forest-800 hover:bg-forest-700 text-white transition-colors" type="submit">
+              <i class="h-4 w-4" data-lucide="search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Filter Buttons matching reference pills -->
+      <div class="flex flex-wrap items-center gap-2 mb-10 text-xs sm:text-sm font-semibold">
+        <button data-filter="todos" class="rounded-full bg-forest-800 text-white px-5 py-2 transition-colors">Todos</button>
+        <button data-filter="villas" class="rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-5 py-2 transition-colors">Villas</button>
+        <button data-filter="apartamentos" class="rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-5 py-2 transition-colors">Apartamentos</button>
+        <button data-filter="terrenos" class="rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-5 py-2 transition-colors">Parcelas / Terrenos</button>
+        <button data-filter="negocios" class="rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-5 py-2 transition-colors">Negocios</button>
+      </div>
+
+      <!-- 4 Cards Property Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Property Card 1: Villa Caracola -->
+        <article data-category="villas" class="group rounded-2xl bg-white border border-neutral-200/70 p-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-100 mb-3">
+            <span class="absolute top-2.5 left-2.5 z-10 rounded-full bg-forest-900/80 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase text-white tracking-wider">En Venta</span>
+            <img 
+              alt="Villa Caracola en Venta Las Terrenas" 
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+              src="https://www.aic-dominicana-inmobiliaria.com/src/piscine-villa-caracola-las-terrenas.jpg"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDBJnUaH0x-QsjaI_8aI3QnvgVO7EYt9hFphSdPq5RjW2j3uFJCiLZq8dRAy6dQJAZT4sVpaxc7VB9bfA4XzCgQSLzoRX1n5gAfVpvPi3N6_2y9d39YBJ18rd_6IkywwlOwP9G3_JdOI1xnpKUfUVcyWL4JrEjLcnmGuyGJ0S1XmK9PWqmTIZYCL0PktbOfKa0WlzI5jasiimBVwXbsBhur_8QlS3FZrLnuYHY6bZlJphzfPTaofXTiBg';"
+            />
+          </div>
+          <div class="px-1 pb-1">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <div>
+                <h3 class="text-sm font-bold text-neutral-900 group-hover:text-forest-700 transition-colors">Villa Caracola & Piscina</h3>
+                <div class="flex items-center gap-1 text-xs text-neutral-500 mt-0.5">
+                  <i class="h-3 w-3 text-neutral-400" data-lucide="map-pin"></i>
+                  <span>Playa Las Ballenas</span>
+                </div>
+              </div>
+              <a href="ventas/villa.html" aria-label="Ver propiedad" class="h-7 w-7 flex-shrink-0 rounded-full bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors">
+                <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+              </a>
+            </div>
+            <div class="mt-2 text-xs font-bold text-forest-700">US$ 685,000</div>
+            <!-- Specs Row -->
+            <div class="mt-2.5 pt-2.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500">
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bed"></i> 4 Hab</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bath"></i> 4 Baños</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="square"></i> 380 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property Card 2: Don Cesar Apartamento -->
+        <article data-category="apartamentos" class="group rounded-2xl bg-white border border-neutral-200/70 p-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-100 mb-3">
+            <span class="absolute top-2.5 left-2.5 z-10 rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold uppercase text-neutral-950 tracking-wider">Vacacional</span>
+            <img 
+              alt="Don Cesar Las Terrenas" 
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+              src="https://www.aic-dominicana-inmobiliaria.com/src/don-cesar-las-terrenas.jpg"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA1FbLwj0HyW4f9xFiM1KIsG1kFjEM2nue0VvDEKFpoI_K1lcq3xmXo_FRyYjvRv35dYpvNj3CSoVU07zFPFTmdnlLbaUYNETpJKvrdzyQpE1eYQERmaE95oypX1kGWEsF4KJf9YaHKPyWC7xcKuaq7iDjRX6fszeutwdppSIh84DrJ_vcZu_f-TjdwHjgDPkQdhbTmfBSls1Hm5m2oTX7A2iFCiFtP0x8i5zRwa3Tq8Ad3sIGLdsO_QA';"
+            />
+          </div>
+          <div class="px-1 pb-1">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <div>
+                <h3 class="text-sm font-bold text-neutral-900 group-hover:text-forest-700 transition-colors">Residencial Don César</h3>
+                <div class="flex items-center gap-1 text-xs text-neutral-500 mt-0.5">
+                  <i class="h-3 w-3 text-neutral-400" data-lucide="map-pin"></i>
+                  <span>Las Terrenas Centro / Playa</span>
+                </div>
+              </div>
+              <a href="alquileres/vacaciones.html" aria-label="Ver propiedad" class="h-7 w-7 flex-shrink-0 rounded-full bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors">
+                <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+              </a>
+            </div>
+            <div class="mt-2 text-xs font-bold text-forest-700">Desde US$ 140 / noche</div>
+            <!-- Specs Row -->
+            <div class="mt-2.5 pt-2.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500">
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bed"></i> 2 Hab</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bath"></i> 2 Baños</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="square"></i> 110 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property Card 3: Villa Sofia -->
+        <article data-category="villas" class="group rounded-2xl bg-white border border-neutral-200/70 p-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-100 mb-3">
+            <span class="absolute top-2.5 left-2.5 z-10 rounded-full bg-forest-900/80 backdrop-blur-md px-2.5 py-1 text-[10px] font-bold uppercase text-white tracking-wider">En Venta</span>
+            <img 
+              alt="Villa Sofia Las Terrenas" 
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+              src="https://www.aic-dominicana-inmobiliaria.com/src/villa-sofia-las-terrenas.jpg"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA3m-jQnDQlTdv5DOoNLdU1h_dtDr7OxCpnDprvmav-eHTyyfAtqCa1s6-f0uNqwfnvqA1ZMDBrX4TnWNRsT_zihaDCc6p6X3gj12imMKfbQMm6HT5ny1bovC2kigTfEcYvALxQveCNm8mrKucnMSWwKomxBoKUOczrlLOp3lv4LfNxK7yyPNoyl4wVvWEmbWfJxgJfSXRDZXLO47IIwY65n-dNoZaAGEqYTnAiPCcoaQdnYKmHnc-jbw';"
+            />
+          </div>
+          <div class="px-1 pb-1">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <div>
+                <h3 class="text-sm font-bold text-neutral-900 group-hover:text-forest-700 transition-colors">Villa Sofía Vista Panorámica</h3>
+                <div class="flex items-center gap-1 text-xs text-neutral-500 mt-0.5">
+                  <i class="h-3 w-3 text-neutral-400" data-lucide="map-pin"></i>
+                  <span>Loma Bonita, Samaná</span>
+                </div>
+              </div>
+              <a href="ventas/villa.html" aria-label="Ver propiedad" class="h-7 w-7 flex-shrink-0 rounded-full bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors">
+                <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+              </a>
+            </div>
+            <div class="mt-2 text-xs font-bold text-forest-700">US$ 495,000</div>
+            <!-- Specs Row -->
+            <div class="mt-2.5 pt-2.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500">
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bed"></i> 3 Hab</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="bath"></i> 3 Baños</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="square"></i> 260 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property Card 4: Casabe Night / Terreno -->
+        <article data-category="terrenos" class="group rounded-2xl bg-white border border-neutral-200/70 p-3 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-100 mb-3">
+            <span class="absolute top-2.5 left-2.5 z-10 rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase text-white tracking-wider">Oportunidad</span>
+            <img 
+              alt="Parcela Vista al Mar Las Terrenas" 
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+              src="https://www.aic-dominicana-inmobiliaria.com/src/casabe-night.jpg"
+              onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDGgXfMpHkNn00eATJ-z2PuTPFoB02Z3iCjtbaidtX8Qbh2kumm9YI06plOiTA982ONYATe0rwLPRPkE7ca2O7EGzNotcW4ZPP0NFmutlgWZy6wC0EbQxvP-Kz9Y47fW4f3cB3sphHAL8sPQbRDE1qMujEBZDsy2aLqKxk_n72GIwkQt-0kSuHAcdKO_87nFAogICPMGQCZ1xx0AJ9DpN4EvvVpaY7vNnIfJXDdAxwSruZxtq76D8w1bQ';"
+            />
+          </div>
+          <div class="px-1 pb-1">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <div>
+                <h3 class="text-sm font-bold text-neutral-900 group-hover:text-forest-700 transition-colors">Parcela Casabé Vista al Mar</h3>
+                <div class="flex items-center gap-1 text-xs text-neutral-500 mt-0.5">
+                  <i class="h-3 w-3 text-neutral-400" data-lucide="map-pin"></i>
+                  <span>Playa Cosón, Las Terrenas</span>
+                </div>
+              </div>
+              <a href="ventas/villa.html" aria-label="Ver propiedad" class="h-7 w-7 flex-shrink-0 rounded-full bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors">
+                <i class="h-3.5 w-3.5" data-lucide="arrow-right"></i>
+              </a>
+            </div>
+            <div class="mt-2 text-xs font-bold text-forest-700">US$ 220,000</div>
+            <!-- Specs Row -->
+            <div class="mt-2.5 pt-2.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500">
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="trees"></i> Deslindado</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="droplet"></i> Agua/Luz</span>
+              <span class="flex items-center gap-1"><i class="h-3 w-3 text-neutral-400" data-lucide="square"></i> 1,850 m²</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination Indicator Dots matching reference layout -->
+      <div class="mt-12 flex items-center justify-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-neutral-300"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-forest-700 ring-2 ring-forest-700/20"></span>
+        <span class="h-2 w-2 rounded-full bg-neutral-300"></span>
+        <span class="h-2 w-2 rounded-full bg-neutral-300"></span>
+      </div>
+    </div>
+  </section>
+  <!-- END: FeaturedPropertiesSection -->
+
+  <!-- BEGIN: Owner CTA Banner -->
+  <section class="py-12 bg-emerald-50 border-t border-b border-emerald-100">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="h-12 w-12 rounded-2xl bg-forest-800 text-white flex items-center justify-center flex-shrink-0">
+          <i class="h-6 w-6 text-amber-500" data-lucide="key"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-forest-950">¿Eres Propietario en Las Terrenas o Samaná?</h3>
+          <p class="text-sm text-forest-800/80">Gestionamos el alquiler de tu propiedad y optimizamos tus ingresos con total transparencia.</p>
+        </div>
+      </div>
+      <button data-modal-target="owner-modal" class="inline-flex items-center gap-2 rounded-full bg-forest-800 hover:bg-forest-900 text-white px-7 py-3 text-sm font-semibold transition-all shadow hover:scale-105 flex-shrink-0">
+        <span>Gestionar mi Inmueble</span>
+        <i class="h-4 w-4" data-lucide="arrow-right"></i>
+      </button>
+    </div>
+  </section>
+  <!-- END: Owner CTA Banner -->
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-forest-950 text-neutral-300 pt-16 pb-12 border-t border-forest-900" data-purpose="page-footer" id="contacto">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-forest-900/80">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500 text-forest-950">
+              <i class="h-5 w-5" data-lucide="palmtree"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">AIC Dominicana</span>
+          </div>
+          <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+            Inmobiliaria establecida en Las Terrenas desde 2002. Alquileres vacacionales, compraventa de villas exclusivas, gestión y construcción en República Dominicana.
+          </p>
+          <div class="flex items-center gap-3 text-neutral-400">
+            <a aria-label="Instagram" class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-forest-700 hover:text-white transition-colors" href="https://www.instagram.com/aic_dominicana/" target="_blank" rel="noopener"><i class="h-4 w-4" data-lucide="instagram"></i></a>
+            <a aria-label="Facebook" class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-forest-700 hover:text-white transition-colors" href="#"><i class="h-4 w-4" data-lucide="facebook"></i></a>
+            <a aria-label="WhatsApp" class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-forest-700 hover:text-white transition-colors" href="https://wa.me/18092406588" target="_blank" rel="noopener"><i class="h-4 w-4" data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2.5 text-xs text-neutral-400">
+            <li><a class="hover:text-emerald-400 transition-colors" href="index.html">Inicio</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="alquileres/vacaciones.html">Alquileres Vacacionales</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="ventas/villa.html">Venta de Villas</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="#servicios">Construcción & Conserjería</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="las-terrenas-y-ustedes/contacto.html">Contacto Directo</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Locations -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Zonas en Las Terrenas</h4>
+          <ul class="space-y-2.5 text-xs text-neutral-400">
+            <li><a class="hover:text-emerald-400 transition-colors" href="alquileres/vacaciones.html">Playa Bonita</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="alquileres/vacaciones.html">Playa Las Ballenas</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="ventas/villa.html">Playa Cosón</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="ventas/villa.html">El Portillo</a></li>
+            <li><a class="hover:text-emerald-400 transition-colors" href="index.html">Península de Samaná</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact details -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <ul class="space-y-3 text-xs text-neutral-400">
+            <li class="flex items-start gap-2.5">
+              <i class="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" data-lucide="map-pin"></i>
+              <span>El Paseo de la Costanera, Av. Juan Pablo Duarte, Las Terrenas, República Dominicana</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="h-4 w-4 text-emerald-400 flex-shrink-0" data-lucide="phone"></i>
+              <a href="tel:+18092406588" class="hover:text-white transition-colors">+1)809-240-6588</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="h-4 w-4 text-emerald-400 flex-shrink-0" data-lucide="mail"></i>
+              <a href="mailto:info@aic-dominicana.com" class="hover:text-white transition-colors">info@aic-dominicana.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="h-4 w-4 text-emerald-400 flex-shrink-0" data-lucide="clock"></i>
+              <span>Lunes a Sábado: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <p>© 2026 AIC Dominicana Inmobiliaria. Todos los derechos reservados.</p>
+        <div class="flex gap-6">
+          <a class="hover:text-neutral-400 transition-colors" href="#">Aviso Legal</a>
+          <a class="hover:text-neutral-400 transition-colors" href="#">Política de Privacidad</a>
+          <a class="hover:text-neutral-400 transition-colors" href="#">Mapa del Sitio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <!-- BEGIN: Mobile Sticky Bar -->
+  <!-- BEGIN: Mobile Sticky Bar (100% Identical Across All Pages) -->
+  <aside aria-label="Acciones rápidas de contacto" class="fixed bottom-0 inset-x-0 z-40 bg-forest-950/95 backdrop-blur-md border-t border-forest-900 px-4 py-2.5 flex items-center justify-around md:hidden">
+    <a href="tel:+18092406588" class="flex flex-col items-center text-white/90 hover:text-emerald-400 text-[10px] font-medium">
+      <i class="h-5 w-5 text-emerald-400 mb-0.5" data-lucide="phone"></i>
+      <span>Llamar</span>
+    </a>
+    <a href="https://wa.me/18092406588" target="_blank" rel="noopener" class="flex flex-col items-center text-white/90 hover:text-emerald-400 text-[10px] font-medium">
+      <i class="h-5 w-5 text-emerald-400 mb-0.5" data-lucide="message-circle"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="/las-terrenas-y-ustedes/contacto.html" class="flex flex-col items-center text-white/90 hover:text-amber-500 text-[10px] font-medium">
+      <i class="h-5 w-5 text-amber-500 mb-0.5" data-lucide="mail"></i>
+      <span>Contacto</span>
+    </a>
+  </aside>
+  <!-- END: Mobile Sticky Bar -->
+  <!-- END: Mobile Sticky Bar -->
+
+  <!-- BEGIN: Mobile Navigation Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="hidden fixed top-0 right-0 z-50 h-full w-4/5 max-w-sm bg-forest-950 text-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 overflow-y-auto">
+    <div class="flex items-center justify-between pb-6 border-b border-forest-900">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-emerald-500 text-forest-950 flex items-center justify-center font-bold">
+          <i class="h-5 w-5" data-lucide="palmtree"></i>
+        </div>
+        <span class="font-bold text-white">AIC Dominicana</span>
+      </div>
+      <button id="mobile-menu-close" aria-label="Cerrar menú" class="h-8 w-8 rounded-full bg-white/10 text-white flex items-center justify-center">
+        <i class="h-5 w-5" data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="py-6 space-y-4">
+      <a class="block py-2 text-base font-semibold text-white hover:text-emerald-300 border-b border-forest-900/50" href="index.html">Inicio</a>
+      <a class="block py-2 text-base font-semibold text-white hover:text-emerald-300 border-b border-forest-900/50" href="alquileres/vacaciones.html">Alquileres Vacacionales</a>
+      <a class="block py-2 text-base font-semibold text-white hover:text-emerald-300 border-b border-forest-900/50" href="ventas/villa.html">Venta de Villas</a>
+      <a class="block py-2 text-base font-semibold text-white hover:text-emerald-300 border-b border-forest-900/50" href="#servicios">Construcción & Conserjería</a>
+      <a class="block py-2 text-base font-semibold text-white hover:text-emerald-300 border-b border-forest-900/50" href="las-terrenas-y-ustedes/contacto.html">Contacto y Ubicación</a>
+    </div>
+
+    <div class="pt-6 border-t border-forest-900 space-y-3 text-xs text-neutral-400">
+      <div class="flex items-center gap-2">
+        <i class="h-4 w-4 text-emerald-400" data-lucide="phone"></i>
+        <a href="tel:+18092406588" class="text-white">+1)809-240-6588</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="h-4 w-4 text-emerald-400" data-lucide="mail"></i>
+        <span>info@aic-dominicana.com</span>
+      </div>
+      <a href="https://wa.me/18092406588" class="mt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm">
+        <i class="h-4 w-4" data-lucide="message-circle"></i>
+        <span>WhatsApp Directo</span>
+      </a>
+    </div>
+  </div>
+  <!-- END: Mobile Navigation Drawer -->
+
+  <!-- BEGIN: Owner Modal Dialog -->
+  <div id="owner-modal" class="aic-modal fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 hidden">
+    <div class="modal-content relative w-full max-w-lg rounded-2xl bg-white p-6 sm:p-8 shadow-2xl transition-all transform scale-95 opacity-0">
+      <button data-modal-close aria-label="Cerrar modal" class="absolute top-4 right-4 h-8 w-8 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-600 flex items-center justify-center">
+        <i class="h-4 w-4" data-lucide="x"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="h-10 w-10 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center">
+          <i class="h-5 w-5" data-lucide="key"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-neutral-900">Gestión de Inmuebles para Propietarios</h3>
+          <p class="text-xs text-neutral-500">AIC Dominicana — Las Terrenas</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-neutral-600 leading-relaxed mb-5">
+        Déjanos los detalles de tu propiedad en Las Terrenas o Samaná y prepararemos una propuesta personalizada de administración y rendimiento vacacional.
+      </p>
+
+      <form data-ajax-form class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-neutral-700 mb-1">Nombre Completo *</label>
+          <input required type="text" class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20" placeholder="Ej. Carlos Martínez"/>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Email *</label>
+            <input required type="email" class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20" placeholder="tu@email.com"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Teléfono / WhatsApp *</label>
+            <input required type="tel" class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20" placeholder="+1 (809)..."/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Tipo de Propiedad</label>
+            <select class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20">
+              <option>Villa</option>
+              <option>Apartamento</option>
+              <option>Proyecto / Terreno</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Ubicación / Playa</label>
+            <input type="text" class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20" placeholder="Ej. Playa Bonita"/>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-neutral-700 mb-1">Detalles o Comentarios</label>
+          <textarea rows="2" class="w-full rounded-xl border-neutral-300 text-sm focus:border-forest-600 focus:ring-forest-600/20" placeholder="Capacidad, número de habitaciones, situación actual..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold text-sm shadow-md transition-all">
+          Enviar Información para Gestión
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- END: Owner Modal Dialog -->
+
+  <!-- Main JavaScript Controller -->
+  <!-- GSAP Core, ScrollTrigger & Vanilla-Tilt Pro Animation Engines -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script src="js/app.js?v=3.5"></script>
+  <script src="js/i18n-bot.js?v=3.5"></script>
+</body>
+</html>
