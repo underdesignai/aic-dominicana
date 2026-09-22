@@ -13,6 +13,7 @@ async function deploy() {
   if (existing) {
     console.log("Existing app found:", existing.uuid, existing.fqdn);
     const dep = await fetch(`${base}/deploy?uuid=${existing.uuid}&force=true`, {
+      method: "POST",
       headers: { Authorization: `Bearer ${token}`, Accept: "application/json" }
     });
     console.log("Trigger deploy status:", dep.status, await dep.text());

@@ -43,9 +43,28 @@ function initIcons() {
 }
 
 /**
- * Mobile Navigation Menu Handler
+ * Mobile Navigation Menu Handler (Slides from the Left) & Mobile Zoom Lock
  */
 function setupMobileMenu() {
+  // Block pinch-to-zoom and double-tap zoom on mobile so it feels like a native app
+  document.addEventListener('gesturestart', (e) => e.preventDefault(), { passive: false });
+  document.addEventListener('gesturechange', (e) => e.preventDefault(), { passive: false });
+  document.addEventListener('gestureend', (e) => e.preventDefault(), { passive: false });
+  document.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+      e.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, { passive: false });
+
   const menuBtn = document.getElementById('mobile-menu-btn');
   const closeBtn = document.getElementById('mobile-menu-close');
   const drawer = document.getElementById('mobile-drawer');
@@ -61,7 +80,7 @@ function setupMobileMenu() {
       backdrop.classList.add('backdrop-open');
     }
     setTimeout(() => {
-      drawer.classList.remove('translate-x-full');
+      drawer.classList.remove('-translate-x-full', 'translate-x-full');
       drawer.classList.add('translate-x-0');
       if (backdrop) {
         backdrop.classList.remove('opacity-0');
@@ -73,7 +92,7 @@ function setupMobileMenu() {
 
   const closeDrawer = () => {
     drawer.classList.remove('translate-x-0');
-    drawer.classList.add('translate-x-full');
+    drawer.classList.add('-translate-x-full');
     if (backdrop) {
       backdrop.classList.remove('opacity-100');
       backdrop.classList.add('opacity-0');

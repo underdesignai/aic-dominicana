@@ -556,13 +556,17 @@
     localStorage.setItem(STORAGE_KEY, lang);
     document.documentElement.setAttribute('lang', lang);
 
-    // 1. Update Switcher Buttons UI
+    // 1. Update Downward Dropdown Switcher UI
+    const currentLabel = document.getElementById('aic-lang-current-label');
+    if (currentLabel) {
+      currentLabel.textContent = lang.toUpperCase();
+    }
     document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
       const btnLang = btn.getAttribute('data-lang-switch');
       if (btnLang === lang) {
-        btn.className = 'lang-btn px-2.5 py-1 rounded-full transition-all bg-emerald-600 text-white shadow-sm font-bold';
+        btn.className = 'lang-option w-full flex items-center justify-between px-3.5 py-2 text-xs font-bold bg-emerald-600/25 text-emerald-300 transition-colors';
       } else {
-        btn.className = 'lang-btn px-2.5 py-1 rounded-full transition-all text-white/75 hover:text-white font-semibold';
+        btn.className = 'lang-option w-full flex items-center justify-between px-3.5 py-2 text-xs font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors';
       }
     });
 
@@ -939,16 +943,47 @@
    * Initialize on DOMContentLoaded
    */
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Bind Language Switcher Buttons
+    const dropdownBtn = document.getElementById('aic-lang-dropdown-btn');
+    const dropdownMenu = document.getElementById('aic-lang-dropdown-menu');
+    const chevron = document.getElementById('aic-lang-chevron');
+
+    const closeDropdown = () => {
+      if (dropdownMenu) dropdownMenu.classList.add('hidden');
+      if (chevron) chevron.style.transform = 'rotate(0deg)';
+    };
+
+    if (dropdownBtn && dropdownMenu) {
+      dropdownBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isHidden = dropdownMenu.classList.contains('hidden');
+        if (isHidden) {
+          dropdownMenu.classList.remove('hidden');
+          if (chevron) chevron.style.transform = 'rotate(180deg)';
+        } else {
+          closeDropdown();
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('#aic-lang-switcher')) {
+          closeDropdown();
+        }
+      });
+    }
+
+    // 1. Bind Language Switcher Options
     document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const selectedLang = btn.getAttribute('data-lang-switch');
         applyLanguage(selectedLang);
+        closeDropdown();
       });
     });
 
-    // 2. Inject and Auto-Start the AIC Dominicana Chatbot
+    // 2. Inject and Auto-Start the AIC Dominicana Chatbot (Desktop only)
     injectChatbot();
 
     // 3. Apply initial language (ES, FR, or EN)
